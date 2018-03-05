@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.selfservice.testcase.TestBase;
 
-public class Feedslistpage extends TestBase {
+public class Feedslistpage extends TestBase  {
 
 	public Feedslistpage(WebDriver driver) {
 		this.driver=driver;
