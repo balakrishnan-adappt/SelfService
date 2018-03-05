@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SelfService"  parallel="tests">
+ 	<test name="SelfService Classes"> 
+	<classes> 
+			<!-- class name="com.selfservice.testcase.HomepageTest" / -->
+			<class name="com.selfservice.testcase.LoginpageTest" /> 
+			<class name="com.selfservice.testcase.FeedslistpageTest" />
+		</classes> 
+	</test> 
+	</suite>
