@@ -4,7 +4,9 @@ package com.selfservice.testcase;
 
 
 import java.awt.Toolkit;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,7 +26,7 @@ import com.selfservice.pages.Loginpage;
 public class TestBase {
 	
 	public WebDriver driver;
-	private String browsertype="chrome";
+	private String browsertype="firefox";
 	protected Homepage homepage;
 	protected Loginpage loginpage;
 	protected Feedslistpage feedslistpage;
@@ -63,6 +65,14 @@ public class TestBase {
 	@FindBy(xpath="//input[@value='No alerts']")
 	protected WebElement no_alerts;
 	
+	@FindBy(xpath="//div[starts-with(@id,'5a')]")
+	protected By dynamic_feeds;
+	
+	@FindBy(xpath="//img[starts-with(@id,'5a')]")
+	protected By bell_icon;
+	
+	@FindBy(xpath="//input[@value='Alert per item']")
+	protected By select_alertperitem;
 	
 	@BeforeClass
 	public void setup() {

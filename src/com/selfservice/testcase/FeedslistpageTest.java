@@ -1,12 +1,17 @@
 package com.selfservice.testcase;
 
+
+import java.util.List;
+
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class FeedslistpageTest extends TestBase{
 	
 	@Test
 	public void feedslist() throws InterruptedException {
-		homepage.waitfor_element().click_on_login().enter_user().enter_pass().wait_for_element().click_on_submitbutton().
-		move_to_feeds().feed_wait().select_alertperfeed();
+		homepage.scroll_pages().go_tologin().login().go_tofeeds().feed_wait().select_feed();	
 	}
 }

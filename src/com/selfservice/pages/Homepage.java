@@ -32,26 +32,19 @@ public class Homepage extends TestBase {
 		System.out.println("Moved page up");
 		return homepage;
 	}
+
+	public Homepage scroll_pages() throws InterruptedException {
+		homepage=new Homepage(driver);
+		PageFactory.initElements(driver, Homepage.class);
+		scroll_page_down().scroll_page_up();
+		return homepage;
+	}
 	
-	public Loginpage wait_for() throws InterruptedException {
+	public Loginpage go_tologin() {
 		loginpage=new Loginpage(driver);
 		PageFactory.initElements(driver, Loginpage.class);
-		Thread.sleep(3000);
 		return loginpage;
 	}
 	
-	public Loginpage waitfor_element() {
-		loginpage=new Loginpage(driver);
-		PageFactory.initElements(driver, Loginpage.class);
-		System.out.println("moved to loginpage");
-		return loginpage;
-	}
 	
-	public Feedslistpage move_to_feeds() throws InterruptedException {
-		feedslistpage=new Feedslistpage(driver);
-		PageFactory.initElements(driver, Feedslistpage.class);
-		Thread.sleep(3000);
-		System.out.println("moved to feeds page");
-		return feedslistpage;
-	}
 }
