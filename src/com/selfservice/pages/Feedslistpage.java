@@ -16,15 +16,14 @@ public class Feedslistpage extends TestBase  {
 
 	public Feedslistpage(WebDriver driver) {
 		this.driver=driver;
-		PageFactory.initElements(driver, Feedslistpage.class);
+		PageFactory.initElements(driver, this);
 	}
 	
 	public Feedslistpage select_feed() {
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
-		List<WebElement> title=driver.findElements(dynamic_feeds);
-		System.out.println("total number of alerts = " +title.size());
-		WebElement f= title.get(5);
+		System.out.println("total number of alerts = " +dynamic_feeds.size());
+		WebElement f= dynamic_feeds.get(5);
 		Actions action = new Actions(driver);
 		action.moveToElement(f).click().perform();
 		System.out.println("element found");

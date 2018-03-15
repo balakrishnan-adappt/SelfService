@@ -1,6 +1,11 @@
 package com.selfservice.pages;
 
+import java.util.Date;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.PageFactory;
 
 import com.selfservice.testcase.TestBase;
@@ -12,6 +17,15 @@ public class Loginpage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
+	public Loginpage ExtractJSLogs() {
+		loginpage=new Loginpage(driver);
+		PageFactory.initElements(driver, Loginpage.class);
+        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+        for (LogEntry entry : logEntries) {
+            System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
+        }
+        return loginpage;
+	}
 	public Loginpage click_on_login() {
 		loginpage=new Loginpage(driver);
 		PageFactory.initElements(driver,Loginpage.class);
@@ -44,10 +58,18 @@ public class Loginpage extends TestBase{
 		return loginpage;
 	}
 	
-	public Loginpage login() {
+	public Loginpage wait_login() throws InterruptedException {
+		loginpage=new Loginpage(driver);
+		PageFactory.initElements(driver, Loginpage.class);
+		Thread.sleep(3000);
+		return loginpage;
+	}
+	
+	public Loginpage login() throws InterruptedException {
 		loginpage=new Loginpage(driver);
 		PageFactory.initElements(driver,Loginpage.class);
-		click_on_login().enter_user().enter_pass().click_on_submitbutton();
+		click_on_login().enter_user().enter_pass().wait_login().click_on_submitbutton();
+		ExtractJSLogs();
 		return loginpage;
 	}
 
@@ -61,5 +83,12 @@ public class Loginpage extends TestBase{
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
 		return feedslistpage;
+	}
+	
+	public Userprofilepage go_toprofile() throws InterruptedException {
+		userprofilepage=new Userprofilepage(driver);
+		PageFactory.initElements(driver, Userprofilepage.class);
+		Thread.sleep(6000);
+		return userprofilepage;
 	}
 }
