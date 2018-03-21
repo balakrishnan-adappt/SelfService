@@ -12,6 +12,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
@@ -92,6 +93,35 @@ public class TestBase {
 	@FindBy(xpath="//button[@type='button']")
 	protected List<WebElement> upload_button;
 	
+	@FindBy(xpath="//input[@name='firstName']")
+	protected WebElement firstname;
+	
+	@FindBy(xpath="//input[@name='lastName']")
+	protected WebElement lastname;
+	
+	@FindBy(xpath="//input[@name='username']")
+	protected WebElement username;
+	
+	@FindBy(xpath="//input[@name='email']")
+	protected WebElement email;
+	
+	@FindBy(xpath="//input[@name='firstName']")
+	protected WebElement firstname1;
+	
+	@FindBy(xpath="//input[@name='lastName']")
+	protected WebElement lastname1;
+	
+	@FindBy(xpath="//button[@type='submit']")
+	protected WebElement profile_submit;
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@BeforeClass
 	public void setup() {
@@ -99,6 +129,10 @@ public class TestBase {
 		switch(browsertype) 
 		{
 		case "chrome":
+			ChromeOptions chrome_Profile = new ChromeOptions();
+			chrome_Profile.addArguments("chrome.switches","--disable-extensions"); 
+			chrome_Profile.addArguments("--disable-save-password");
+			chrome_Profile.addArguments("disable-infobars");
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bala\\Downloads\\chromedriver.exe");
 			 DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		        LoggingPreferences loggingprefs = new LoggingPreferences();

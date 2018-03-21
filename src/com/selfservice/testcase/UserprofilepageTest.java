@@ -11,7 +11,7 @@ public class UserprofilepageTest extends TestBase{
 
 	@Test
 	public void verify_profile() throws InterruptedException, IOException {
-		homepage.scroll_pages().go_tologin().login().go_toprofile().click_update().profile_wait().update_profilephoto();
+		homepage.scroll_pages().go_tologin().login().go_toprofile().profile_update();
 	}
 	
 }
