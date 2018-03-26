@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59075" started-at="2018-03-20T08:51:31Z" finished-at="2018-03-20T08:52:30Z">
+  <suite name="Default suite" duration-ms="53376" started-at="2018-03-23T06:34:07Z" finished-at="2018-03-23T06:35:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59075" started-at="2018-03-20T08:51:31Z" finished-at="2018-03-20T08:52:30Z">
+    <test name="Default test" duration-ms="53376" started-at="2018-03-23T06:34:07Z" finished-at="2018-03-23T06:35:00Z">
       <class name="com.selfservice.testcase.UserprofilepageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="setup" is-config="true" duration-ms="12606" started-at="2018-03-20T08:51:31Z" finished-at="2018-03-20T08:51:44Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="setup" is-config="true" duration-ms="8249" started-at="2018-03-23T06:34:07Z" finished-at="2018-03-23T06:34:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verify_profile()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="verify_profile" duration-ms="41321" started-at="2018-03-20T08:51:44Z" finished-at="2018-03-20T08:52:25Z">
+        <test-method status="PASS" signature="verify_profile()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="verify_profile" duration-ms="39999" started-at="2018-03-23T06:34:15Z" finished-at="2018-03-23T06:34:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_profile -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="close" is-config="true" duration-ms="5123" started-at="2018-03-20T08:52:25Z" finished-at="2018-03-20T08:52:30Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="close" is-config="true" duration-ms="5110" started-at="2018-03-23T06:34:55Z" finished-at="2018-03-23T06:35:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

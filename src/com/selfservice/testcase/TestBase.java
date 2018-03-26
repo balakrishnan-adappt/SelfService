@@ -24,7 +24,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-
+import com.selfservice.pages.Addfeedspage;
 import com.selfservice.pages.Feedslistpage;
 import com.selfservice.pages.Homepage;
 import com.selfservice.pages.Loginpage;
@@ -38,6 +38,7 @@ public class TestBase {
 	protected Loginpage loginpage;
 	protected Feedslistpage feedslistpage;
 	protected Userprofilepage userprofilepage;
+	protected Addfeedspage addfeedspage;
 	
 	/*Loginpage elements*/
 	
@@ -113,6 +114,11 @@ public class TestBase {
 	
 	@FindBy(xpath="//button[@type='submit']")
 	protected WebElement profile_submit;
+	
+	/*Add Feeds page elements*/
+	
+	@FindBy(xpath="//a[contains(text(),'Add Feeds')]")
+	protected WebElement click_addfeedsmenu;
 	
 	
 	

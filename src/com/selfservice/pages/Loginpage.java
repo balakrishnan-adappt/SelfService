@@ -69,7 +69,7 @@ public class Loginpage extends TestBase{
 		loginpage=new Loginpage(driver);
 		PageFactory.initElements(driver,Loginpage.class);
 		click_on_login().enter_user().enter_pass().wait_login().click_on_submitbutton();
-		ExtractJSLogs();
+//		ExtractJSLogs();
 		return loginpage;
 	}
 

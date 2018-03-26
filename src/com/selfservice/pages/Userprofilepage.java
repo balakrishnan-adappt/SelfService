@@ -23,6 +23,7 @@ public class Userprofilepage extends TestBase {
 		userprofilepage=new Userprofilepage(driver);
 		PageFactory.initElements(driver, Userprofilepage.class);
 		update_profile.click();
+		System.out.println("update profile is clicked");
 		return userprofilepage;
 	}
 	
@@ -33,7 +34,6 @@ public class Userprofilepage extends TestBase {
 		Runtime.getRuntime().exec("E:\\FileUpload.exe");
 		driver.switchTo().activeElement();
 		Thread.sleep(3000);
-		System.out.println("totla buttons = " +upload_button.size());
 		WebElement b=upload_button.get(1);
 		Actions action = new Actions(driver);
 		action.moveToElement(b).click().perform();
@@ -58,7 +58,7 @@ public class Userprofilepage extends TestBase {
 		String first_name=firstname.getAttribute("value");
 		System.out.println("firstname before update is  "+first_name);
 		firstname.clear();
-		firstname.sendKeys(generateRandomString(8));
+		firstname.sendKeys(generateRandomString(5));
 		return userprofilepage;
 	}
 	
@@ -68,7 +68,7 @@ public class Userprofilepage extends TestBase {
 		String last_name=lastname.getAttribute("value");
 		System.out.println("lastname before update is   "+last_name);
 		lastname.clear();
-		lastname.sendKeys(generateRandomString(9));
+		lastname.sendKeys(generateRandomString(6));
 		return userprofilepage;
 	}
 	

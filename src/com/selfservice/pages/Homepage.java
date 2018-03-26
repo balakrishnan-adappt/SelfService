@@ -56,7 +56,7 @@ public class Homepage extends TestBase {
 	public Homepage scroll_pages() throws InterruptedException {
 		homepage=new Homepage(driver);
 		PageFactory.initElements(driver, Homepage.class);
-		ExtractJSLogs();
+//		ExtractJSLogs();
 		scroll_page_down().scroll_page_up();
 		return homepage;
 	}
