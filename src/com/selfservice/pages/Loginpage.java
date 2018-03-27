@@ -91,4 +91,11 @@ public class Loginpage extends TestBase{
 		Thread.sleep(6000);
 		return userprofilepage;
 	}
+	
+	public Addfeedspage go_to_addfeeds() throws InterruptedException {
+		addfeedspage=new Addfeedspage(driver);
+		PageFactory.initElements(driver, Addfeedspage.class);
+		Thread.sleep(3000);
+		return addfeedspage;
+	}
 }

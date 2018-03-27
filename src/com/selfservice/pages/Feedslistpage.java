@@ -23,7 +23,7 @@ public class Feedslistpage extends TestBase  {
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
 		System.out.println("total number of alerts = " +dynamic_feeds.size());
-		WebElement f= dynamic_feeds.get(5);
+		WebElement f= dynamic_feeds.get(3);
 		Actions action = new Actions(driver);
 		action.moveToElement(f).click().perform();
 		System.out.println("element found");
@@ -33,10 +33,8 @@ public class Feedslistpage extends TestBase  {
 	public Feedslistpage click_bell_icon() {
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
-		List<WebElement> bell=driver.findElements(bell_icon);
-		bell.size();
-		System.out.println("total subscribed alerts = " + bell.size());
-		WebElement b=bell.get(0);
+		System.out.println("total subscribed alerts = " + bell_icon.size());
+		WebElement b=bell_icon.get(0);
 		Actions bellaction = new Actions(driver);
 		bellaction.moveToElement(b).click().perform();
 		System.out.println("bell icon clicked");
@@ -46,9 +44,9 @@ public class Feedslistpage extends TestBase  {
 	public Feedslistpage select_alertperitem() {
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
-		List<WebElement> alert_per_item=driver.findElements(select_alertperitem);
-		System.out.println("Total alert per feeds = " + alert_per_item.size());
-		WebElement alert1=alert_per_item.get(2);
+		
+		System.out.println("Total alert per feeds = " + select_alertperitem.size());
+		WebElement alert1=select_alertperitem.get(1);
 		Actions alert1_click=new Actions(driver);
 		alert1_click.moveToElement(alert1).click().perform();
 		System.out.println("alert per item is selected");

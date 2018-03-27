@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53376" started-at="2018-03-23T06:34:07Z" finished-at="2018-03-23T06:35:00Z">
+  <suite name="Default suite" duration-ms="59542" started-at="2018-03-27T08:07:28Z" finished-at="2018-03-27T08:08:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="53376" started-at="2018-03-23T06:34:07Z" finished-at="2018-03-23T06:35:00Z">
-      <class name="com.selfservice.testcase.UserprofilepageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="setup" is-config="true" duration-ms="8249" started-at="2018-03-23T06:34:07Z" finished-at="2018-03-23T06:34:15Z">
+    <test name="Default test" duration-ms="59542" started-at="2018-03-27T08:07:28Z" finished-at="2018-03-27T08:08:27Z">
+      <class name="com.selfservice.testcase.FeedslistpageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.FeedslistpageTest@4b1c1ea0]" name="setup" is-config="true" duration-ms="15690" started-at="2018-03-27T08:07:28Z" finished-at="2018-03-27T08:07:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verify_profile()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="verify_profile" duration-ms="39999" started-at="2018-03-23T06:34:15Z" finished-at="2018-03-23T06:34:55Z">
+        <test-method status="PASS" signature="feedslist()[pri:0, instance:com.selfservice.testcase.FeedslistpageTest@4b1c1ea0]" name="feedslist" duration-ms="38677" started-at="2018-03-27T08:07:44Z" finished-at="2018-03-27T08:08:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_profile -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.UserprofilepageTest@4b1c1ea0]" name="close" is-config="true" duration-ms="5110" started-at="2018-03-23T06:34:55Z" finished-at="2018-03-23T06:35:00Z">
+        </test-method> <!-- feedslist -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.FeedslistpageTest@4b1c1ea0]" name="close" is-config="true" duration-ms="5158" started-at="2018-03-27T08:08:22Z" finished-at="2018-03-27T08:08:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.selfservice.testcase.UserprofilepageTest -->
+      </class> <!-- com.selfservice.testcase.FeedslistpageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

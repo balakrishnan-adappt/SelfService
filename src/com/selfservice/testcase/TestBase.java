@@ -78,10 +78,10 @@ public class TestBase {
 	protected List<WebElement> dynamic_feeds;
 	
 	@FindBy(xpath="//img[starts-with(@id,'5a')]")
-	protected By bell_icon;
+	protected List<WebElement> bell_icon;
 	
 	@FindBy(xpath="//input[@value='Alert per item']")
-	protected By select_alertperitem;
+	protected List<WebElement> select_alertperitem;
 	
 	/*User profile page Elements*/
 	
@@ -120,13 +120,39 @@ public class TestBase {
 	@FindBy(xpath="//a[contains(text(),'Add Feeds')]")
 	protected WebElement click_addfeedsmenu;
 	
+	@FindBy(xpath="//div[@class='page-count']")
+	protected WebElement feed_count;
+	
+	@FindBy(xpath="//button[contains(text(),'Add Feed')]")
+	protected WebElement addfeed_button;
+	
+	@FindBy(id="feed_title")
+	protected WebElement feed_title;
+	
+	@FindBy(id="feed_url")
+	protected WebElement feed_url;
+	
+	@FindBy(xpath="//span[contains(text(),'Upload Image')]")
+	protected WebElement upload_feedimage;
+	
+	@FindBy(xpath="//button[contains(text(),'center')]")
+	protected WebElement center_feedimage;
+	
+	@FindBy(xpath="//button[contains(text(),'create')]")
+	protected WebElement create_feed;
+	
+	@FindBy(xpath="//span[@class='fa fa-pencil']")
+	protected List<WebElement> edit_feedicon;
+	
+	@FindBy(xpath="//button[contains(text(),'update')]")
+	protected WebElement update_feed;
 	
 	
+	@FindBy(xpath="//span[@class='fa fa-trash']")
+	protected List<WebElement> delete_feedicon;
 	
-	
-	
-	
-	
+	@FindBy(xpath="//button[contains(text(),'OK')]")
+	protected WebElement delete_OK;
 	
 	
 	@BeforeClass
