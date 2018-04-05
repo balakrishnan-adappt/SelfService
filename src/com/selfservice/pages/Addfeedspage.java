@@ -5,8 +5,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -178,6 +178,7 @@ public class Addfeedspage extends TestBase{
         driver.switchTo().window(sub_window);
         delete_OK.click();
         Thread.sleep(3000);
+        driver.switchTo().window(parent_window);
         System.out.println("feed has been deleted");
         return addfeedspage;
 	}

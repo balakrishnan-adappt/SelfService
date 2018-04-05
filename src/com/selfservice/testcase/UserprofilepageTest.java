@@ -2,8 +2,7 @@ package com.selfservice.testcase;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+
 import org.testng.annotations.Test;
 
 public class UserprofilepageTest extends TestBase{

@@ -1,10 +1,9 @@
 package com.selfservice.pages;
 
 import java.io.IOException;
-import java.util.List;
+
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
