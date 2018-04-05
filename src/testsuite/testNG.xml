@@ -9,6 +9,7 @@
 			<class name="com.selfservice.testcase.FeedslistpageTest" />
 			<class name="com.selfservice.testcase.UserprofilepageTest" />
 			<class name="com.selfservice.testcase.AddfeedspageTest" />
+			<class name="com.selfservice.testcase.CategorypageTest"/>
 		</classes> 
 	</test> 
 	</suite>
