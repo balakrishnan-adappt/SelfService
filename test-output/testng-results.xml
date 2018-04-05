@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="153585" started-at="2018-04-05T07:27:51Z" finished-at="2018-04-05T07:30:25Z">
+  <suite name="Default suite" duration-ms="45235" started-at="2018-04-05T12:13:51Z" finished-at="2018-04-05T12:14:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="153585" started-at="2018-04-05T07:27:51Z" finished-at="2018-04-05T07:30:25Z">
-      <class name="com.selfservice.testcase.AddfeedspageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.AddfeedspageTest@4b1c1ea0]" name="setup" is-config="true" duration-ms="24137" started-at="2018-04-05T07:27:51Z" finished-at="2018-04-05T07:28:15Z">
+    <test name="Default test" duration-ms="45235" started-at="2018-04-05T12:13:51Z" finished-at="2018-04-05T12:14:36Z">
+      <class name="com.selfservice.testcase.CategorypageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.CategorypageTest@15d0c81b]" name="setup" is-config="true" duration-ms="8499" started-at="2018-04-05T12:13:51Z" finished-at="2018-04-05T12:13:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="feedspagetest()[pri:0, instance:com.selfservice.testcase.AddfeedspageTest@4b1c1ea0]" name="feedspagetest" duration-ms="124313" started-at="2018-04-05T07:28:15Z" finished-at="2018-04-05T07:30:20Z">
+        <test-method status="PASS" signature="category_test()[pri:0, instance:com.selfservice.testcase.CategorypageTest@15d0c81b]" name="category_test" duration-ms="31551" started-at="2018-04-05T12:13:59Z" finished-at="2018-04-05T12:14:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- feedspagetest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.AddfeedspageTest@4b1c1ea0]" name="close" is-config="true" duration-ms="5113" started-at="2018-04-05T07:30:20Z" finished-at="2018-04-05T07:30:25Z">
+        </test-method> <!-- category_test -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.CategorypageTest@15d0c81b]" name="close" is-config="true" duration-ms="5165" started-at="2018-04-05T12:14:31Z" finished-at="2018-04-05T12:14:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.selfservice.testcase.AddfeedspageTest -->
+      </class> <!-- com.selfservice.testcase.CategorypageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

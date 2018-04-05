@@ -5,9 +5,9 @@ package com.selfservice.testcase;
 
 import java.awt.Toolkit;
 import java.util.List;
-import java.util.logging.Level;
 
-import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,10 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -189,9 +186,10 @@ public class TestBase {
 	protected List<WebElement> button_categorydelete;
 	
 	@FindBy(xpath="//button[contains(text(),'OK')]")
-	protected WebElement delete_ok;
+	protected WebElement delete_category_ok;
 	
-	
+	@FindBy(xpath="//div[@class='page-count']")
+	protected WebElement category_count;
 	
 	
 	
@@ -207,21 +205,21 @@ public class TestBase {
 			chrome_Profile.addArguments("--disable-save-password");
 			chrome_Profile.addArguments("disable-infobars");
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bala\\Downloads\\chromedriver_2.37\\chromedriver2.37.exe");
-			 DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		        LoggingPreferences loggingprefs = new LoggingPreferences();
-		        loggingprefs.enable(LogType.BROWSER, Level.ALL);
-		        capabilities.setCapability(CapabilityType.LOGGING_PREFS, loggingprefs);
-		        driver = new ChromeDriver(capabilities);
+//			 DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//		        LoggingPreferences loggingprefs = new LoggingPreferences();
+//		        loggingprefs.enable(LogType.BROWSER, Level.ALL);
+//		        capabilities.setCapability(CapabilityType.LOGGING_PREFS, loggingprefs);
+		        driver = new ChromeDriver();
 			System.out.println("Chrome browser is launched");
 			break;
 			
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Bala\\Downloads\\geckodriver.exe");
-			 DesiredCapabilities capabilities1 = DesiredCapabilities.firefox();
-		        LoggingPreferences loggingprefs1 = new LoggingPreferences();
-		        loggingprefs1.enable(LogType.BROWSER, Level.ALL);
-		        capabilities1.setCapability(CapabilityType.LOGGING_PREFS, loggingprefs1);
-			driver=new FirefoxDriver(capabilities1);
+//			 DesiredCapabilities capabilities1 = DesiredCapabilities.firefox();
+//		        LoggingPreferences loggingprefs1 = new LoggingPreferences();
+//		        loggingprefs1.enable(LogType.BROWSER, Level.ALL);
+//		        capabilities1.setCapability(CapabilityType.LOGGING_PREFS, loggingprefs1);
+			driver=new FirefoxDriver();
 			System.out.println("Firefox browser is launched");
 			break;
 			

@@ -98,4 +98,11 @@ public class Loginpage extends TestBase{
 		Thread.sleep(3000);
 		return addfeedspage;
 	}
+	
+	public Categorypage go_to_category() throws InterruptedException {
+		categorypage=new Categorypage(driver);
+		PageFactory.initElements(driver, Categorypage.class);
+		Thread.sleep(2000);
+		return categorypage;
+	}
 }
