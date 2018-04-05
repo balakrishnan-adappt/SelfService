@@ -61,10 +61,11 @@ public class Addfeedspage extends TestBase{
 		return addfeedspage;
 	}
 	
-	public Addfeedspage upload_feedimage() throws IOException {
+	public Addfeedspage upload_feedimage() throws IOException, InterruptedException {
 		addfeedspage=new Addfeedspage(driver);
 		PageFactory.initElements(driver, Addfeedspage.class);
 		upload_feedimage.click();
+		Thread.sleep(5000);
 		Runtime.getRuntime().exec("E:\\Feedimage_upload.exe");
 		driver.switchTo().activeElement();
 		System.out.println("feed image has been uploaded");
@@ -193,5 +194,11 @@ public class Addfeedspage extends TestBase{
 		PageFactory.initElements(driver, Addfeedspage.class);
 		click_feeddelete().addfeedspage_wait().delete_popup().addfeedspage_wait().feed_count2();
 		return addfeedspage;
+	}
+	
+	public Feedslistpage go_tofeeds() {
+		feedslistpage=new Feedslistpage(driver);
+		PageFactory.initElements(driver, Feedslistpage.class);
+		return feedslistpage;
 	}
 }

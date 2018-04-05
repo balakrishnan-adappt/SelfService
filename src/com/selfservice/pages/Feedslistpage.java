@@ -23,7 +23,7 @@ public class Feedslistpage extends TestBase  {
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
 		System.out.println("total number of alerts = " +dynamic_feeds.size());
-		WebElement f= dynamic_feeds.get(3);
+		WebElement f= dynamic_feeds.get(2);
 		Actions action = new Actions(driver);
 		action.moveToElement(f).click().perform();
 		System.out.println("element found");
@@ -41,12 +41,20 @@ public class Feedslistpage extends TestBase  {
 		return feedslistpage;
 	}
 	
+	public Feedslistpage click_doneButton() throws InterruptedException {
+		feedslistpage=new Feedslistpage(driver);
+		PageFactory.initElements(driver, Feedslistpage.class);
+		done_button.click();
+		Thread.sleep(2000);
+		return feedslistpage;
+	}
+	
 	public Feedslistpage select_alertperitem() {
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
 		
 		System.out.println("Total alert per feeds = " + select_alertperitem.size());
-		WebElement alert1=select_alertperitem.get(1);
+		WebElement alert1=select_alertperitem.get(0);
 		Actions alert1_click=new Actions(driver);
 		alert1_click.moveToElement(alert1).click().perform();
 		System.out.println("alert per item is selected");
@@ -56,7 +64,7 @@ public class Feedslistpage extends TestBase  {
 	public Feedslistpage Alert_per_item() throws InterruptedException {
 		feedslistpage=new Feedslistpage(driver);
 		PageFactory.initElements(driver, Feedslistpage.class);
-		select_feed().feed_wait().click_bell_icon().select_alertperitem();
+		feed_wait().select_feed().feed_wait().click_bell_icon().feed_wait().select_alertperitem().click_doneButton();
 		return feedslistpage;
 	}
 	
@@ -97,6 +105,13 @@ public class Feedslistpage extends TestBase  {
 		PageFactory.initElements(driver, Feedslistpage.class);
 		Thread.sleep(5000);
 		return feedslistpage;
+	}
+	
+	public Userprofilepage go_toprofile() throws InterruptedException {
+		userprofilepage=new Userprofilepage(driver);
+		PageFactory.initElements(driver, Userprofilepage.class);
+		Thread.sleep(6000);
+		return userprofilepage;
 	}
 	
 	}

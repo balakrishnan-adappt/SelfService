@@ -94,4 +94,11 @@ public class Userprofilepage extends TestBase {
 		System.out.println("lastname after update is   "+last_name1);
 		return userprofilepage;
 	}
+	
+	public Addfeedspage go_to_addfeeds() throws InterruptedException {
+		addfeedspage=new Addfeedspage(driver);
+		PageFactory.initElements(driver, Addfeedspage.class);
+		Thread.sleep(3000);
+		return addfeedspage;
+	}
 }

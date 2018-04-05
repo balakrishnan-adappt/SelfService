@@ -4,7 +4,7 @@
 <suite name="SelfService"  parallel="tests">
  	<test name="SelfService Classes"> 
 	<classes> 
-			<class name="com.selfservice.testcase.HomepageTest" />
+			<!--  class name="com.selfservice.testcase.HomepageTest" -->
 			<class name="com.selfservice.testcase.LoginpageTest" /> 
 			<class name="com.selfservice.testcase.FeedslistpageTest" />
 			<class name="com.selfservice.testcase.UserprofilepageTest" />

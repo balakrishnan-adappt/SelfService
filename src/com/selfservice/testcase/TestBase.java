@@ -25,6 +25,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.selfservice.pages.Addfeedspage;
+import com.selfservice.pages.Categorypage;
 import com.selfservice.pages.Feedslistpage;
 import com.selfservice.pages.Homepage;
 import com.selfservice.pages.Loginpage;
@@ -39,6 +40,8 @@ public class TestBase {
 	protected Feedslistpage feedslistpage;
 	protected Userprofilepage userprofilepage;
 	protected Addfeedspage addfeedspage;
+	protected Categorypage categorypage;
+	
 	
 	/*Loginpage elements*/
 	
@@ -80,8 +83,12 @@ public class TestBase {
 	@FindBy(xpath="//img[starts-with(@id,'5a')]")
 	protected List<WebElement> bell_icon;
 	
+	@FindBy(xpath="//button[contains(text(),'Done')]")
+	protected WebElement done_button;
+	
 	@FindBy(xpath="//input[@value='Alert per item']")
 	protected List<WebElement> select_alertperitem;
+	
 	
 	/*User profile page Elements*/
 	
@@ -155,6 +162,40 @@ public class TestBase {
 	protected WebElement delete_OK;
 	
 	
+	/*Category Page Elements*/
+	
+	@FindBy(xpath="//a[contains(text(),'Category')]")
+	protected WebElement button_categorymenu;
+	
+	@FindBy(xpath="//button[contains(text(),'Add Category')]")
+	protected WebElement button_addcategory;
+	
+	@FindBy(id="catname")
+	protected WebElement category_name;
+	
+	@FindBy(xpath="//button[contains(text(),'create')]")
+	protected WebElement button_categorycreate;
+	
+	@FindBy(xpath="//button[contains(text(),'cancel')]")
+	protected WebElement button_categorycancel;
+	
+	@FindBy(xpath="//span[@class='fa fa-pencil']")
+	protected List<WebElement> button_categoryedit; 
+	
+	@FindBy(xpath="//button[contains(text(),'update')]")
+	protected WebElement button_categoryupdate;
+	
+	@FindBy(xpath="//span[@class='fa fa-trash']")
+	protected List<WebElement> button_categorydelete;
+	
+	@FindBy(xpath="//button[contains(text(),'OK')]")
+	protected WebElement delete_ok;
+	
+	
+	
+	
+	
+	
 	@BeforeClass
 	public void setup() {
 		
@@ -165,7 +206,7 @@ public class TestBase {
 			chrome_Profile.addArguments("chrome.switches","--disable-extensions"); 
 			chrome_Profile.addArguments("--disable-save-password");
 			chrome_Profile.addArguments("disable-infobars");
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bala\\Downloads\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bala\\Downloads\\chromedriver_2.37\\chromedriver2.37.exe");
 			 DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 		        LoggingPreferences loggingprefs = new LoggingPreferences();
 		        loggingprefs.enable(LogType.BROWSER, Level.ALL);

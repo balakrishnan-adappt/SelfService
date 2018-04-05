@@ -37,7 +37,7 @@ public class Homepage extends TestBase {
 		homepage=new Homepage(driver);
 		PageFactory.initElements(driver, Homepage.class);
 		JavascriptExecutor jse = ((JavascriptExecutor) driver);
-		jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 		Thread.sleep(2000);
 		System.out.println("Moved page down");
 		return homepage;
@@ -47,7 +47,8 @@ public class Homepage extends TestBase {
 		homepage=new Homepage(driver);
 		PageFactory.initElements(driver, Homepage.class);
 		JavascriptExecutor jse = ((JavascriptExecutor) driver);
-		jse.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+		jse.executeScript("arguments[0].scrollIntoView(true);",click_login);
+//		jse.executeScript("window.scrollTo(0, -document.body.scrollHeight);");
 		Thread.sleep(2000);
 		System.out.println("Moved page up");
 		return homepage;
