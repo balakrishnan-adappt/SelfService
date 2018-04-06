@@ -27,6 +27,7 @@ import com.selfservice.pages.Feedslistpage;
 import com.selfservice.pages.Homepage;
 import com.selfservice.pages.Loginpage;
 import com.selfservice.pages.Userprofilepage;
+import com.selfservice.pages.Userspage;
 
 public class TestBase {
 	
@@ -38,6 +39,7 @@ public class TestBase {
 	protected Userprofilepage userprofilepage;
 	protected Addfeedspage addfeedspage;
 	protected Categorypage categorypage;
+	protected Userspage userspage;
 	
 	
 	/*Loginpage elements*/
@@ -190,6 +192,38 @@ public class TestBase {
 	
 	@FindBy(xpath="//div[@class='page-count']")
 	protected WebElement category_count;
+	
+	
+	/*Users page Elements*/
+	
+	@FindBy(xpath="//a[contains(text(),'Users')]")
+	protected WebElement button_usersmenu;
+	
+	@FindBy(xpath="//button[contains(text(),'Add User')]")
+	protected WebElement button_adduser;
+	
+	@FindBy(id="username")
+	protected WebElement text_username;
+	
+	@FindBy(id="email")
+	protected WebElement text_email;
+	
+	@FindBy(id="password")
+	protected WebElement text_password;
+	
+	@FindBy(id="confrmPass")
+	protected WebElement text_confrmPass;
+	
+	@FindBy(xpath="//select[@placeholder='Select User Roles']")
+	protected WebElement userrole_dropdown;
+	
+	@FindBy(xpath="//button[contains(text(),'create')]")
+	protected WebElement button_createuser;
+	
+	@FindBy(xpath="//div[@class='page-count']")
+	protected WebElement user_count;
+	
+	
 	
 	
 	

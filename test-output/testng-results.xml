@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45235" started-at="2018-04-05T12:13:51Z" finished-at="2018-04-05T12:14:36Z">
+  <suite name="Default suite" duration-ms="68392" started-at="2018-04-06T09:14:56Z" finished-at="2018-04-06T09:16:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45235" started-at="2018-04-05T12:13:51Z" finished-at="2018-04-05T12:14:36Z">
-      <class name="com.selfservice.testcase.CategorypageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.CategorypageTest@15d0c81b]" name="setup" is-config="true" duration-ms="8499" started-at="2018-04-05T12:13:51Z" finished-at="2018-04-05T12:13:59Z">
+    <test name="Default test" duration-ms="68392" started-at="2018-04-06T09:14:56Z" finished-at="2018-04-06T09:16:05Z">
+      <class name="com.selfservice.testcase.UserspageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.selfservice.testcase.UserspageTest@15d0c81b]" name="setup" is-config="true" duration-ms="18810" started-at="2018-04-06T09:14:56Z" finished-at="2018-04-06T09:15:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="category_test()[pri:0, instance:com.selfservice.testcase.CategorypageTest@15d0c81b]" name="category_test" duration-ms="31551" started-at="2018-04-05T12:13:59Z" finished-at="2018-04-05T12:14:31Z">
+        <test-method status="PASS" signature="verify_userspage()[pri:0, instance:com.selfservice.testcase.UserspageTest@15d0c81b]" name="verify_userspage" duration-ms="44458" started-at="2018-04-06T09:15:15Z" finished-at="2018-04-06T09:15:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- category_test -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.CategorypageTest@15d0c81b]" name="close" is-config="true" duration-ms="5165" started-at="2018-04-05T12:14:31Z" finished-at="2018-04-05T12:14:36Z">
+        </test-method> <!-- verify_userspage -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.selfservice.testcase.UserspageTest@15d0c81b]" name="close" is-config="true" duration-ms="5100" started-at="2018-04-06T09:15:59Z" finished-at="2018-04-06T09:16:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.selfservice.testcase.CategorypageTest -->
+      </class> <!-- com.selfservice.testcase.UserspageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

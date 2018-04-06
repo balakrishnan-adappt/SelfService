@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selfservice.testcase.CategorypageTest">
+      <class name="com.selfservice.testcase.UserspageTest">
         <methods>
+          <include name="verify_userspage"/>
           <include name="close"/>
-          <include name="category_test"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.selfservice.testcase.CategorypageTest -->
+      </class> <!-- com.selfservice.testcase.UserspageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
