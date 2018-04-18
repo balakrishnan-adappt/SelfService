@@ -33,6 +33,7 @@ public class TestBase {
 	
 	public WebDriver driver;
 	private String browsertype="chrome";
+	public String user_role="companyuser";
 	protected Homepage homepage;
 	protected Loginpage loginpage;
 	protected Feedslistpage feedslistpage;

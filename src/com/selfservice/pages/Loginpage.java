@@ -17,15 +17,21 @@ public class Loginpage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public Loginpage ExtractJSLogs() {
-		loginpage=new Loginpage(driver);
-		PageFactory.initElements(driver, Loginpage.class);
-        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
-        for (LogEntry entry : logEntries) {
-            System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
-        }
-        return loginpage;
-	}
+	
+//	public Loginpage ExtractJSLogs() {
+//		loginpage=new Loginpage(driver);
+//		PageFactory.initElements(driver, Loginpage.class);
+//        LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
+//        for (LogEntry entry : logEntries) {
+//            System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
+//        }
+//        return loginpage;
+//	}
+	
+	
+	
+	
+	
 	public Loginpage click_on_login() {
 		loginpage=new Loginpage(driver);
 		PageFactory.initElements(driver,Loginpage.class);
@@ -70,6 +76,29 @@ public class Loginpage extends TestBase{
 		PageFactory.initElements(driver,Loginpage.class);
 		click_on_login().enter_user().enter_pass().wait_login().click_on_submitbutton();
 //		ExtractJSLogs();
+		return loginpage;
+	}
+	
+	public Loginpage userrole() {
+		loginpage=new Loginpage(driver);
+		PageFactory.initElements(driver,Loginpage.class);
+		switch(user_role) 
+		{
+		case "superadmin":
+			username_textfield.sendKeys("superadmin@yopmail.com");
+			password_textfield.sendKeys("12345678");
+			break;
+			
+		case "companyadmin":
+			username_textfield.sendKeys("companyadmin@yopmail.com");
+			password_textfield.sendKeys("12345678");
+			break;
+			
+		case "companyuser":
+			username_textfield.sendKeys("companyuser@yopmail.com");
+			password_textfield.sendKeys("12345678");
+			break;
+		}
 		return loginpage;
 	}
 
