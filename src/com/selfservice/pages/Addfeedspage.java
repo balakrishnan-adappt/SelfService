@@ -21,10 +21,10 @@ public class Addfeedspage extends TestBase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public Addfeedspage click_addfeeds() {
+	public Addfeedspage click_addfeeds() throws InterruptedException {
 		addfeedspage=new Addfeedspage(driver);
 		PageFactory.initElements(driver, Addfeedspage.class);
-		click_addfeedsmenu.click();
+		click(click_addfeedsmenu);
 		System.out.println("Add feeds menu is opened");
 		return addfeedspage;
 	}

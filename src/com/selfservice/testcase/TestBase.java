@@ -224,7 +224,10 @@ public class TestBase {
 	@FindBy(xpath="//div[@class='page-count']")
 	protected WebElement user_count;
 	
-	
+	public void click(WebElement element) throws InterruptedException {
+		element.click();
+		Thread.sleep(3000);
+	}
 	
 	
 	
